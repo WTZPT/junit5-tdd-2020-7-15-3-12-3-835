@@ -15,7 +15,7 @@ public class FizzBuzzWhizz {
             result += BUZZ;
         }
         if(input % 7 == 0){
-            return WHIZZ;
+            result += WHIZZ;
         }
         return result.equals("") ? String.valueOf(input) : result;
     }

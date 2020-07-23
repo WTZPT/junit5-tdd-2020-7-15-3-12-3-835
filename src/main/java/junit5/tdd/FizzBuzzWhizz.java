@@ -2,6 +2,6 @@ package junit5.tdd;
 
 public class FizzBuzzWhizz {
     public String playFizzBuzzWhizz(int input) {
-        return null;
+        return String.valueOf(input);
     }
 }

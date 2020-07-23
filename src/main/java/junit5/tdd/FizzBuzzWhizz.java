@@ -8,15 +8,21 @@ public class FizzBuzzWhizz {
 
     public String playFizzBuzzWhizz(int input) {
         String result = "";
-        if(input % 3 == 0) {
-            result += FIZZ;
-        }
-        if(input % 5 == 0) {
-            result += BUZZ;
-        }
-        if(input % 7 == 0){
-            result += WHIZZ;
-        }
+        result += checkFizz(input);
+        result += checkBuzz(input);
+        result += checkWhizz(input);
         return result.equals("") ? String.valueOf(input) : result;
+    }
+
+    private String checkFizz(int input) {
+        return input % 3 == 0 ? FIZZ : "";
+    }
+
+    private String checkBuzz(int input) {
+        return input % 5 == 0 ? BUZZ : "";
+    }
+
+    private String checkWhizz(int input) {
+        return input % 7 == 0 ? WHIZZ : "";
     }
 }

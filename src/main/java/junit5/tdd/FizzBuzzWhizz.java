@@ -7,15 +7,16 @@ public class FizzBuzzWhizz {
     private static String WHIZZ = "Whizz";
 
     public String playFizzBuzzWhizz(int input) {
+        String result = "";
         if(input % 3 == 0) {
-            return FIZZ;
+            result += FIZZ;
         }
         if(input % 5 == 0) {
-            return BUZZ;
+            result += BUZZ;
         }
         if(input % 7 == 0){
             return WHIZZ;
         }
-        return String.valueOf(input);
+        return result.equals("") ? String.valueOf(input) : result;
     }
 }
